@@ -1,0 +1,15 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+body {
+    font-size: 100pt;
+    width:100vw;
+}
+#dot div{
+  position:absolute;
+  bottom:0;
+  transition: transform 2s,top;
+  transform:translate(15px -200px);
+}
