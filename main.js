@@ -1,11 +1,14 @@
 console.log('Hello World!');
-
-for(i=0;i<=40;i++){
+let makeDiv = document.getElementById('dot');
+  makeDiv.innerText = '*';
   let randomNumber = Math.floor(Math.random()*100);
-  let randomSize = Math.floor(Math.random()*100);
-  let makeDiv = document.createElement('div');
+  let randomSize = Math.floor(Math.random()*100)+20;
+  let randomOpacity = Math.floor(Math.random()*10);
+  
   makeDiv.style.fontSize = randomSize+'%';
   makeDiv.style.left = randomNumber+'vw';
-  makeDiv.innerText = '*';
-  document.getElementById('dot').appendChild(makeDiv)
-};
+  makeDiv.style.opacity = '0.'+randomOpacity;
+
+function moveDiv(){
+  makeDiv.style.transform ='translate(200px 200px)' 
+}
