@@ -6,13 +6,23 @@
 body {
     font-size: 100pt;
     width:100vw;
+    height:100vh;
+    overflow: hidden;
 }
-#dot{
-  position:absolute;
-  bottom:0;
-  transition: all 2s;
+#dot {
+  width: 50px;
+  height: 50px;
+  background-image: url('src/know.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
 }
-#dot:hover{
-  transition: all 2s;
-  
+
+@keyframes example {
+  from   {bottom:-10px;}
+  to {bottom:100vh;}
 }
